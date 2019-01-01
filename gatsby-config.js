@@ -5,7 +5,7 @@ module.exports = {
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `macknesss`,
+      twitter: `macks0l`,
     },
   },
   plugins: [
@@ -30,7 +30,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              quality: 100
             },
           },
           {
@@ -42,7 +42,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              showLineNumbers: true
+              showLineNumbers: false
             }
           },
           `gatsby-remark-copy-linked-files`,

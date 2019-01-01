@@ -7,9 +7,10 @@ class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
+    const isRoot = location.pathname === rootPath;
     let header
 
-    if (location.pathname === rootPath) {
+    if (isRoot) {
       header = (
         <h1
           style={{
@@ -61,7 +62,7 @@ class Layout extends React.Component {
         {header}
         {children}
         <footer>
-          © 2019, Built with ☕
+          © 2019, Powered by ☕
         </footer>
       </div>
     )

@@ -1,0 +1,74 @@
+a {
+    color: green;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+/* ::selection {
+    color: white;
+    background: #00e0e0;
+}
+::-moz-selection {
+    color: white;
+    background: #00e0e0;
+} */
+
+.gatsby-highlight {
+    position: relative;
+}
+
+pre[class*="language-"] {
+    padding: 1.45em 1em;
+}
+
+.gatsby-highlight pre[class*='language-']::before {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    padding: 3px 10px;
+    font-size: 12px;
+    text-align: right;
+    color: #444;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 0 0 5px 5px;
+    background: #ddd;
+    content: " ";
+}
+
+.gatsby-highlight pre.language-jsx::before {
+    content: 'jsx';
+    background: #61dafb;
+}
+
+.gatsby-highlight pre.language-js::before {
+    content: 'js';
+    background: #f7df1e;
+}
+
+.line-numbers .line-numbers-rows {
+    padding-top: 1.4em;
+    padding-bottom: 1.1em;
+    padding-left: 0.4em;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+    padding: 0;
+    padding: 1.45em 1em 1.1em 3.2em;
+    overflow: auto;
+}
+
+code.not-pre {
+    background-color: rgba(27,31,35,.05);
+    border-radius: 3px;
+    font-size: 85%;
+    margin: 0;
+    padding: .2em .4em;
+}

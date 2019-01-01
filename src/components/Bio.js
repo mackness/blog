@@ -5,6 +5,9 @@ import Image from 'gatsby-image'
 import { rhythm } from '../utils/typography'
 
 function Bio() {
+  const rootPath = `${__PATH_PREFIX__}/`
+  const isRoot = location.pathname === rootPath;
+  const IAMGE_DIMENSION = isRoot ? 75 : 50;
   return (
     <StaticQuery
       query={bioQuery}
@@ -14,6 +17,7 @@ function Bio() {
           <div
             style={{
               display: `flex`,
+              marginBottom: rhythm(.5)
             }}
           >
             <Image
@@ -22,15 +26,16 @@ function Bio() {
               style={{
                 marginRight: rhythm(1 / 2),
                 marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
+                maxWidth: IAMGE_DIMENSION,
+                maxHeight: IAMGE_DIMENSION,
+                borderRadius: `100%`
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in Santa Monica
+              Written by <strong>{author}</strong> who lives and works in Santa Monica,
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
+                follow me on Twitter
               </a>
             </p>
           </div>
@@ -44,7 +49,7 @@ const bioQuery = graphql`
   query BioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 150, height: 150) {
           ...GatsbyImageSharpFixed
         }
       }
