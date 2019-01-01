@@ -37,7 +37,7 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1)
           }}
         />
-        <Bio />
+        <Bio location={this.props.location} />
 
         <ul
           style={{

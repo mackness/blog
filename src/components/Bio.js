@@ -4,7 +4,7 @@ import Image from 'gatsby-image'
 
 import { rhythm } from '../utils/typography'
 
-function Bio() {
+function Bio({location}) {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRoot = location.pathname === rootPath;
   const IAMGE_DIMENSION = isRoot ? 75 : 50;
@@ -32,7 +32,7 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in Santa Monica,
+              Written by <strong>{author}</strong> who lives and works in Westwood,
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 follow me on Twitter
