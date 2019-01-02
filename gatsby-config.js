@@ -67,7 +67,7 @@ module.exports = {
         short_name: `Web Adventures`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#6200EA`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },
