@@ -15,7 +15,7 @@ write a post documenting what I have learned.
 * Perform automatic transforms on JSON data
 
 I wrote a tiny vanilla JS [demo app](https://bitbucket.org/macksol/movie-finder/src/master/) that 
-fetches movies from the IMDB API. Here is the model that we are going to write tests for -> 
+fetches movies from the IMDB API. Here is the model that we are going to write a test for -> 
 [Model Class](https://bitbucket.org/macksol/movie-finder/src/master/src/scripts/model.js)
 
 
@@ -68,7 +68,7 @@ searching for.<br>
 successul.<br>
 <code class="not-pre">[13]</code> Store the reponse in the cache.<br>
 
-#### The Actual Unit Test
+#### The Actual Test Case
 
 The first thing we need to do in the 
 [model.spec.js](https://bitbucket.org/macksol/movie-finder/src/master/src/tests/model.spec.js) file 
