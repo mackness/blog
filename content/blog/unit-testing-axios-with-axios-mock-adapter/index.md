@@ -125,8 +125,7 @@ onGet(
 
 <code class="not-pre">matcher</code> can be a string or RegExp literal that is used to match against
 the request url.</br>
-<code class="not-pre">body</code> is am object that is used to match against query params in the
-request url.
+<code class="not-pre">body</code> is am object that is used to match against query params in the request url.</br>
 <code class="not-pre">headers</code> is an object used to match against request headers.
 
 Here is the <code class="not-pre">reply</code> signature, it applies to 
