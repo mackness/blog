@@ -141,7 +141,7 @@ reply(
 ```
 <code class="not-pre">statusOrCallback</code> this can eithe be a number that represents the 
 response status code or it can be a function that take an axios config object as a parameter.</br>
-<code class="not-pre">data</code> is the mock object that will be retured in the response body.
+<code class="not-pre">data</code> is the mock object that will be retured in the response body. </br>
 <code class="not-pre">headers</code> headers that will be set on the mock resposne.
 
 
