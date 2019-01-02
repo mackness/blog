@@ -19,7 +19,7 @@ fetches movies from the IMDB API. Here is the model that we are going to write a
 [Model Class](https://bitbucket.org/macksol/movie-finder/src/master/src/scripts/model.js)
 
 
-#### Setting up the Mock Axios Instance
+### Setting up the Mock Axios Instance
 The first thing that we need to think about is how to use the Axios Mock Adapter instance in a test
 and the real Axios instance in the application code. An easy way to accomplish that is to pass
 the Mock Axios instance into the constructor fo the Model class:
@@ -31,7 +31,7 @@ this._axios = (options && options.axiosInstance) ? options.axiosInstance : axios
 Now the mock instance can be used in test code and the real instance can be used in application
 code.
 
-#### Pick a Request to Test
+### Pick a Request to Test
 
 We will start by writing a test for the movie details request on 
 [line 34](https://bitbucket.org/macksol/movie-finder/src/43149d733dd1eb2ec65d430ed7546f7a29cf0e36/src/scripts/model.js#lines-45).
@@ -68,7 +68,7 @@ searching for.<br>
 successul.<br>
 <code class="not-pre">[13]</code> Store the reponse in the cache.<br>
 
-#### The Actual Test Case
+### The Actual Test Case
 
 The first thing we need to do in the 
 [model.spec.js](https://bitbucket.org/macksol/movie-finder/src/master/src/tests/model.spec.js) file 
@@ -107,7 +107,7 @@ url we want to match. Then call the reply request handler passing in the status 
 <code class="not-pre">[8]</code> Call <code class="not-pre">model.loadMovieDetails</code> and expect
 the reponse to match the response passed into the adapters reply function.
 
-#### More on Axios Mock Adapter
+### More on Axios Mock Adapter
 
 Here is a complete list of Mock Adapter's matcher functions: 
 [axios-mock-adapter/types/index.d.ts](https://github.com/ctimmerm/axios-mock-adapter/blob/9836b59e248fdeef5627c246007ca60cd4497aec/types/index.d.ts#L54-L61)
