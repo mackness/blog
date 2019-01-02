@@ -22,7 +22,7 @@ fetches movies from the IMDB API. Here is the model that we are going to write t
 #### Setting up the Mock Axios Instance
 The first thing that we need to think about is how to use the Axios Mock Adapter instance in a test
 and the real Axios instance in the application code. An easy way to accomplish that is to pass
-the Mock Axios instance into the constructor:
+the Mock Axios instance into the constructor fo the Model class:
 
 ```js
 this._axios = (options && options.axiosInstance) ? options.axiosInstance : axios;
@@ -54,16 +54,18 @@ loadMovieDetails(id) {
 }
 ```
 
-The function make a <code class="not-pre">GET</code> request for movie details by movie id and cahces the response on the model class,
-The cache gets purged evertime a new movie is searched for. It's a naive caching strategy
-but it serves the demo app well. 
+The function make a <code class="not-pre">GET</code> request for movie details by movie id and 
+cahces the response on the model class, The cache gets purged evertime a new movie is searched for. 
+It's a naive caching strategy but it serves the demo app well. 
 
 Before we start writing the actual test let's break down what the funciton is doing line by line.
 
-<code class="not-pre">[7]</code> Check to see a cache entry exists for the movie id that we are searching for.<br>
+<code class="not-pre">[7]</code> Check to see a cache entry exists for the movie id that we are 
+searching for.<br>
 <code class="not-pre">[8]</code> If it does return the cached movie details data.<br>
 <code class="not-pre">[10]</code> If it doesn't make the details request.<br>
-<code class="not-pre">[12]</code> When the details request resolves validate the request was successul.<br>
+<code class="not-pre">[12]</code> When the details request resolves validate the request was 
+successul.<br>
 <code class="not-pre">[13]</code> Store the reponse in the cache.<br>
 
 #### The Actual Unit Test
@@ -77,7 +79,7 @@ const mockAxiosInstance = new MockAdapter(axios);
 const model = new Model({mockAxiosInstance});
 ```
 
-Axios Mock Adapter's <code class="not-pre">onGet(url:string, options?:object)</code> method can be used to mock requests made to 
+Axios Mock Adapter's <code class="not-pre">onGet</code> method can be used to mock requests made to 
 a given url. Consider the following test case:
 
 ```js{numberLines: true}
@@ -96,6 +98,52 @@ describe('Movie Detail Request', () => {
 });
 ```
 
+Let'ts go through the test line by line.
+
+<code class="not-pre">[2]</code> Load the mock mock response.<br>
+<code class="not-pre">[3]</code> Store the IMDB movie id in a variable.<br>
+<code class="not-pre">[6]</code> Call the <code class="not-pre">onGet</code> matcher function in the
+url we want to match. Then call the reply request handler passing in the status code and mock response.<br>
+<code class="not-pre">[8]</code> Call <code class="not-pre">model.loadMovieDetails</code> and expect
+the reponse to match the response passed into the adapters reply function.
+
+#### More on Axios Mock Adapter
+
+Here is a complete list of Mock Adapter's matcher functions: 
+[axios-mock-adapter/types/index.d.ts](https://github.com/ctimmerm/axios-mock-adapter/blob/9836b59e248fdeef5627c246007ca60cd4497aec/types/index.d.ts#L54-L61)
+
+Here is the <code class="not-pre">onGet</code> signature, it applies to all the other matcher 
+functions also:
+
+```js
+onGet(
+    matcher?: string | RegExp, 
+    body?: string | object, 
+    headers?: object
+);
+```
+
+<code class="not-pre">matcher</code> can be a string or RegExp literal that is used to match against
+the request url.</br>
+<code class="not-pre">body</code> is am object that is used to match against query params in the
+request url.
+<code class="not-pre">headers</code> is an object used to match against request headers.
+
+Here is the <code class="not-pre">reply</code> signature, it applies to 
+[these request handlers also](https://github.com/ctimmerm/axios-mock-adapter/blob/9836b59e248fdeef5627c246007ca60cd4497aec/types/index.d.ts#L14-L17).
+
+```js
+reply(
+    statusOrCallback: number | function,
+    data?: any,
+    headers?: any
+);
+```
+<code class="not-pre">statusOrCallback</code> this can eithe be a number that represents the 
+response status code or it can be a function that take an axios config object as a parameter.</br>
+<code class="not-pre">data</code> is the mock object that will be retured in the response body.
+<code class="not-pre">headers</code> headers that will be set on the mock resposne.
 
 
-
+Axios mock adapter is a pretty awesome little library that makes it fun to unit test your network 
+request code. Thanks for reading!

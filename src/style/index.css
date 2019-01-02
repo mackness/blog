@@ -53,6 +53,12 @@ pre[class*="language-"] {
     background: #f7df1e;
 }
 
+.gatsby-highlight pre.language-ts::before {
+    content: 'ts';
+    color: #fff;
+    background: #3085f7;
+}
+
 .line-numbers .line-numbers-rows {
     padding-top: 1.4em;
     padding-bottom: 1.1em;
