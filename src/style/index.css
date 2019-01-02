@@ -1,14 +1,12 @@
 a {
-    color: green;
+    color: #6200EA;
+    
 }
 
 a:hover {
     text-decoration: none;
 }
 
-a:visited {
-    color: purple;
-}
 
 /* ::selection {
     color: white;
