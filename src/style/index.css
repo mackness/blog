@@ -22,7 +22,7 @@ a:hover {
 }
 
 pre[class*="language-"] {
-    padding: 1.45em 1em;
+    padding: 1.85em 1em 1.25em 1em;
 }
 
 .gatsby-highlight pre[class*='language-']::before {
