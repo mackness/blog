@@ -1,19 +1,10 @@
 import Typography from 'typography'
-import FairyGates from 'typography-theme-fairy-gates'
-
-FairyGates.overrideThemeStyles = () => {
-  return {
-    'a': {
-      textDecoration: `none`
-    }
-  }
-}
 
 const typography = new Typography({
-  baseFontSize: "18px",
+  baseFontSize: "16px",
   baseLineHeight: 1.666,
-  headerFontFamily: ["Avenir Next", "serif"],
-  bodyFontFamily: ["Avenir Next", "serif"]
+  headerFontFamily: ["lato", "serif"],
+  bodyFontFamily: ["open sans", "serif"]
 })
 
 // Hot reload typography in development.
