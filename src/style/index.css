@@ -1,21 +1,10 @@
 a {
     color: #6200EA;
-    
 }
 
 a:hover {
     text-decoration: none;
 }
-
-
-/* ::selection {
-    color: white;
-    background: #00e0e0;
-}
-::-moz-selection {
-    color: white;
-    background: #00e0e0;
-} */
 
 .gatsby-highlight {
     position: relative;
