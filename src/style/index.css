@@ -66,3 +66,7 @@ code.not-pre {
     margin: 0;
     padding: .2em .4em;
 }
+
+pre[class*=language-] {
+    padding: 1.85em 1em 1.36em;
+}
