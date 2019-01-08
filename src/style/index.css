@@ -1,5 +1,5 @@
-html {
-    font: 110%/1.666 'open sans',serif;
+.is-production {
+    font: 110%/1.666 'open sans',serif !important;
 }
 
 a {

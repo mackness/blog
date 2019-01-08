@@ -54,6 +54,7 @@ class Layout extends React.Component {
     }
     return (
       <div
+        className={process.env.NODE_ENV === 'production' ? 'is-production': ''}
         style={{
           maxWidth: rhythm(24),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
