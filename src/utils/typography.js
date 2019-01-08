@@ -5,18 +5,7 @@ const typography = new Typography({
   baseLineHeight: 1.666,
   headerFontFamily: ["lato", "serif"],
   bodyFontFamily: ["open sans", "serif"]
-})
-
-// Hot reload typography in development.
-if (process.env.NODE_ENV !== `production`) {
-  const typography = new Typography({
-    baseFontSize: "18px",
-    baseLineHeight: 1.666,
-    headerFontFamily: ["lato", "serif"],
-    bodyFontFamily: ["open sans", "serif"]
-  })
-  typography.injectStyles()
-}
+});
 
 export default typography
 export const rhythm = typography.rhythm
