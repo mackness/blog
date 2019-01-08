@@ -11,7 +11,7 @@ a:hover {
 }
 
 pre[class*="language-"] {
-    padding: 1.85em 1em 1.25em 1em;
+    padding: 1.85em 1em 1.26em 1em;
 }
 
 .gatsby-highlight[data-language]::before {
@@ -41,21 +41,21 @@ pre[class*="language-"] {
     background: #f7df1e;
 }
 
-.gatsby-highlight pre.language-ts::before {
+.gatsby-highlight[data-language="typescript"]::before {
     content: 'ts';
     color: #fff;
     background: #3085f7;
 }
 
 .line-numbers .line-numbers-rows {
-    padding-top: 1.4em;
-    padding-bottom: 1.1em;
+    padding-top: 2em;
+    padding-bottom: 1em;
     padding-left: 0.4em;
 }
 
 .gatsby-highlight pre[class*="language-"].line-numbers {
     padding: 0;
-    padding: 2.05em 1em 1.1em 3.2em;
+    padding: 2.05em 1em 1em 3.2em;
     overflow: auto;
 }
 

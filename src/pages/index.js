@@ -32,7 +32,7 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small style={{marginBottom: rhythm(1)}}>{node.frontmatter.date}</small>
+              <small style={{marginBottom: rhythm(1)}}>{node.frontmatter.date}</small> &middot;
               <small style={{marginBottom: rhythm(1), marginLeft: 6}}>{node.fields.readingTime.text}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
