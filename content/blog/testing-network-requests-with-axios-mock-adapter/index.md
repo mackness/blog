@@ -7,7 +7,7 @@ date: '2019-01-08'
 [Axios Mock Adapter v1.16.0](https://github.com/ctimmerm/axios-mock-adapter) are a really powerful
 combination of tools when it comes to testing network requests made with Axios. I wanted to create 
 a place to document the API and write a few tests for 
-[this model](https://bitbucket.org/macksol/movie-finder/src/master/src/scripts/model.js).
+[this model](https://github.com/mackness/MVC-Movie-Finder/blob/master/src/scripts/model.js).
 
 
 ### Axios Mock Adapter API Overview
@@ -99,7 +99,7 @@ export default class Model {
  ### Pick a Request to Test
 
 Let's use the movie details request on 
-[line 45](https://bitbucket.org/macksol/movie-finder/src/9e7c9232360bd88a72b058225ca61dd8ad4b6cc6/src/scripts/model.js#lines-45) 
+[line 45](https://github.com/mackness/MVC-Movie-Finder/blob/26eec40116934d9c15b1b0d74dbfbd20e63f23e4/src/scripts/model.js#L45) 
 as the test subject.
 ```js
 /**
@@ -122,7 +122,7 @@ The request is pretty straight forward. Load movie details from the API or the l
 
 ### The Test Case
 The first thing we need to do in the 
-[model.spec.js](https://bitbucket.org/macksol/movie-finder/src/master/src/tests/model.spec.js) file 
+[model.spec.js](https://github.com/mackness/MVC-Movie-Finder/blob/master/src/tests/model.spec.js) file 
 is setup instances of the model and mock adapter passing in the mock adapter instance into the 
 model.
 
@@ -195,5 +195,5 @@ making a network request and getting a response from the real imdb API the reque
 we get the response defined by <code class="not-pre">replyOnce</code>.
 
 That's pretty much it, feel free to clone the
-[movie finder app](https://bitbucket.org/macksol/movie-finder/src/master/) and run the tests. 
+[movie finder app](https://github.com/mackness/MVC-Movie-Finder/) and run the tests. 
 Thanks for reading!
