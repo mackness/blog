@@ -15,6 +15,7 @@ class Layout extends React.Component {
         <h1
           style={{
             ...scale(1.5),
+            marginBottom: rhythm(2),
             textDecoration: 'none',
             marginTop: 0,
             boxShadow: `none`,
