@@ -7,7 +7,7 @@ class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    const isRoot = location.pathname === rootPath;
+    const isRoot = location.pathname === rootPath
     let header
 
     if (isRoot) {
@@ -17,6 +17,9 @@ class Layout extends React.Component {
             ...scale(1.5),
             textDecoration: 'none',
             marginTop: 0,
+            boxShadow: `none`,
+            textDecoration: `none`,
+            color: `inherit`,
           }}
         >
           <Link
@@ -24,6 +27,9 @@ class Layout extends React.Component {
               boxShadow: `none`,
               textDecoration: `none`,
               color: `inherit`,
+              textDecorationLine: 'underline',
+              textDecorationStyle: 'wavy',
+              textDecorationColor: '#6200EA',
             }}
             to={`/`}
           >
@@ -57,14 +63,12 @@ class Layout extends React.Component {
         style={{
           maxWidth: rhythm(24),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          margin: '0 auto'
+          margin: '0 auto',
         }}
       >
         {header}
         {children}
-        <footer>
-          © 2019, Powered by ☕
-        </footer>
+        <footer>© 2019, Powered by ☕</footer>
       </div>
     )
   }

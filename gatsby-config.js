@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Frontend Web Development Adventures`,
+    title: `Mack Solomon`,
     author: `Mack Solomon`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A web developer working accross the stack`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `macks0l`,
@@ -31,7 +31,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              quality: 100
+              quality: 100,
             },
           },
           {
@@ -43,8 +43,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              showLineNumbers: false
-            }
+              showLineNumbers: false,
+            },
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
