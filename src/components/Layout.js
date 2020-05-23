@@ -70,6 +70,21 @@ class Layout extends React.Component {
         {header}
         {children}
         <footer>© 2019, Powered by ☕</footer>
+        <div
+          style={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            padding: '0 4px',
+            fontSize: '10px',
+            textAlign: 'right',
+            background: '#6200EA',
+            color: '#fff',
+          }}
+        >
+          {new Date().toTimeString()}
+        </div>
       </div>
     )
   }

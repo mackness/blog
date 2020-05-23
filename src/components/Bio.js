@@ -4,10 +4,10 @@ import Image from 'gatsby-image'
 
 import { rhythm } from '../utils/typography'
 
-function Bio({location}) {
+function Bio({ location }) {
   const rootPath = `${__PATH_PREFIX__}/`
-  const isRoot = location.pathname === rootPath;
-  const IAMGE_DIMENSION = isRoot ? 75 : 50;
+  const isRoot = location.pathname === rootPath
+  const IAMGE_DIMENSION = isRoot ? 75 : 50
   return (
     <StaticQuery
       query={bioQuery}
@@ -17,10 +17,10 @@ function Bio({location}) {
           <div
             style={{
               display: `flex`,
-              marginBottom: rhythm(.5)
+              marginBottom: rhythm(0.5),
             }}
           >
-            <Image
+            {/* <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
               style={{
@@ -28,15 +28,16 @@ function Bio({location}) {
                 marginBottom: 0,
                 maxWidth: IAMGE_DIMENSION,
                 maxHeight: IAMGE_DIMENSION,
-                borderRadius: `100%`
+                borderRadius: `100%`,
               }}
-            />
+            /> */}
             <p>
-              Written by <strong>{author}</strong> who lives and works in Westwood,
+              Hi! My name is <strong>{author}</strong> I'm a passionate web
+              developer who lives and works in Los Angleles, CA.
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
+              {/* <a href={`https://twitter.com/${social.twitter}`}>
                 follow me on Twitter
-              </a>
+              </a> */}
             </p>
           </div>
         )
